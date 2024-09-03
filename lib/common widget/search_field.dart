@@ -24,7 +24,7 @@ class SearchField extends StatelessWidget {
         focusedBorder: OutlineInputBorder(
             borderSide: const BorderSide(color: Colors.black),
             borderRadius: BorderRadius.circular(8)),
-        labelText: "Search here...",
+        labelText: "Search Hospital or Doctors",
         // suffixIcon: InkWell(
         //     onTap: onTap,
         //     child: Icon(Icons.search))
