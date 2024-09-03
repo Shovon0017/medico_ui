@@ -1,24 +1,26 @@
 
 
-import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:medico/view/screen/start%20page/start_page.dart';
+import 'package:get/get.dart';
+import 'package:medico/controller/getX%20controller/Splash.dart';
 
-class Splash extends StatelessWidget {
+class Splash extends StatefulWidget {
+
   const Splash({super.key});
+
+  @override
+  State<Splash> createState() => _SplashState();
+}
+
+class _SplashState extends State<Splash> {
 
 
   @override
   Widget build(BuildContext context) {
-    Timer(const Duration(seconds: 5),(){
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> const StartPage()));
-    });
-    return Scaffold(
-      backgroundColor: Color(0xffFFFFFF),
+    Get.put(SplashController());
+    return Scaffold(backgroundColor: const  Color(0xffFFFFFF),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: Column(mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset("images/splash logo.png")
           ],
