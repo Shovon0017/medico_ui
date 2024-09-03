@@ -26,39 +26,36 @@ class _HomeState extends State<Home> {
       ),
       body: Column(
         children: [
-          Expanded(
-            flex: 3,
-            child: ListView.builder(
+          Container(
+            height: 120,
+            width: double.infinity,
+            child: Expanded(
+              flex: 6,
+              child: ListView.builder(
                 itemCount: 3,
-                shrinkWrap: true,
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.only(top: 8, bottom: 8, left: 5),
-                    child: Container(
-                      height: 30,
-                      width: 120,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Image.asset(
-                        "images/trand2.png",
-                        fit: BoxFit.cover,
-                      ),
-                    ),
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context,index){
+                  return Container(
+                    height: 120,
+                    width: 206,
+                    color: Colors.red,
                   );
-                }),
+              }),
+            ),
           ),
+          Text("Category",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
           Expanded(
             flex: 6,
             child: GridView.builder(
               itemCount: 9,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3, childAspectRatio: .5),
+                    crossAxisCount: 3, childAspectRatio: .8,
+                mainAxisSpacing: 30,
+                crossAxisSpacing: 30,
+                ),
                 itemBuilder: (context, index) {
                   return Container(
-                    height: 20,
-                    width: 20,
+
                     color: Colors.red,
                   );
                 }),
