@@ -11,7 +11,7 @@ class HomeNavigationBar extends StatefulWidget {
 }
 
 class _HomeNavigationBarState extends State<HomeNavigationBar> {
-  int index=0;
+  int index=3;
   final screens=[
 
     Home()
