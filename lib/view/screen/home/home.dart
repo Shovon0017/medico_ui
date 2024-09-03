@@ -38,12 +38,16 @@ class _HomeState extends State<Home> {
                   return Container(
                     height: 120,
                     width: 206,
-                    color: Colors.red,
+
+                    child: Image.asset("images/trand2.png"),
                   );
               }),
             ),
           ),
           Text("Category",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+          SizedBox(
+            height: 30,
+          ),
           Expanded(
             flex: 6,
             child: GridView.builder(
