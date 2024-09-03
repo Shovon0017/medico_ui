@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -15,14 +13,13 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         title: SizedBox(
-          height: 32,
-          width: 114,
-          child: Image.asset("images/splash logo.png")
-        ),
+            height: 32,
+            width: 114,
+            child: Image.asset("images/splash logo.png")),
         centerTitle: true,
         actions: [
           Padding(
-            padding: const EdgeInsets.only(right:10),
+            padding: const EdgeInsets.only(right: 10),
             child: Icon(Icons.notifications_active_outlined),
           )
         ],
@@ -35,37 +32,34 @@ class _HomeState extends State<Home> {
                 itemCount: 3,
                 shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
-                itemBuilder: (context,index){
+                itemBuilder: (context, index) {
                   return Padding(
-                    padding: const EdgeInsets.only(top: 8,bottom: 8,left: 5),
+                    padding: const EdgeInsets.only(top: 8, bottom: 8, left: 5),
                     child: Container(
-                      height: 100,
+                      height: 30,
                       width: 120,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Image.asset("images/shovon01.jpg",fit: BoxFit.cover,),
+                      child: Image.asset(
+                        "images/trand2.png",
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   );
                 }),
           ),
           Expanded(
             flex: 6,
-            child: ListView.builder(
-                itemCount: 50,
-                shrinkWrap: true,
-                scrollDirection: Axis.vertical,
-                itemBuilder: (context,index){
-                  return Padding(
-                    padding: const EdgeInsets.only(top: 8,bottom: 8,left: 5),
-                    child: Container(
-                        height: 500,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.grey
-                        ),
-                        child: Image.asset("images/Screenshot (73).png",fit: BoxFit.fill,)
-                    ),
+            child: GridView.builder(
+              itemCount: 9,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3, childAspectRatio: .5),
+                itemBuilder: (context, index) {
+                  return Container(
+                    height: 20,
+                    width: 20,
+                    color: Colors.red,
                   );
                 }),
           ),
