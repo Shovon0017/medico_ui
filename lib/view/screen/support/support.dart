@@ -25,16 +25,50 @@ class Support extends StatelessWidget {
                   buttonColor: Color(0xff22A6FE),
                   buttonName: "Feedback & Suggesstion",
                   onTap: () {}),
+              SizedBox(
+                height: 150,
+              ),
               Container(
                 height: 100,
                 width: double.infinity,
                 color: Color(0xffE9E9E9),
-                child: Column(
+                child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Row(
-                      children: [
+                    Container(
+                      height: 100,
+                      width: 100,
+                      child: Column(
+                        children: [
+                          SizedBox(height: 70,
+                              width: 70,
+                              child: Image.asset("images/Facebook Messenger.png")),
+                          Text("Messenger"),
+                        ],
+                      ),
+                    ),Container(
+                      height: 100,
+                      width: 100,
 
-                      ],
+                      child: Column(
+                        children: [
+                          SizedBox(height: 70,
+                              width: 70,
+                              child: Image.asset("images/Email.png")),
+                          Text("Email"),
+                        ],
+                      ),
+                    ),Container(
+                      height: 100,
+                      width: 100,
+
+                      child: Column(
+                        children: [
+                          SizedBox(height: 70,
+                              width: 70,
+                              child: Image.asset("images/Ring.png")),
+                          Text("Call"),
+                        ],
+                      ),
                     )
                   ],
                 ),
