@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medico/common%20widget/common_button.dart';
 import 'package:medico/view/screen/home/home.dart';
-import 'package:medico/view/screen/navigation%20bar/navigation.dart';
 
 class LanguageSelection extends StatelessWidget {
   const LanguageSelection({super.key});
@@ -22,7 +21,7 @@ class LanguageSelection extends StatelessWidget {
             }),
             CommonButton(buttonColor:Color(0xff22A6FE) ,
                 buttonName: "English", onTap: (){
-              Get.to(()=>HomeNavigationBar());
+              Get.to(()=>Home());
             })
           ],
         ),
