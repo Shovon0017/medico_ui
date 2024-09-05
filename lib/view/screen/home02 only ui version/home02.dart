@@ -2,10 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medico/common%20widget/search_field.dart';
+import 'package:medico/view/screen/Doctor_Report/doctor_report.dart';
+import 'package:medico/view/screen/FAQ/FAQ.dart';
 import 'package:medico/view/screen/Hospital_list/hospitalListSearch.dart';
 import 'package:medico/view/screen/department/department_api_version.dart';
 import 'package:medico/view/screen/department/department_ui_version.dart';
 import 'package:medico/view/screen/doctor%20list/doctorListSearch.dart';
+import 'package:medico/view/screen/investigation/investigation.dart';
+import 'package:medico/view/screen/setting/setting.dart';
 import 'package:medico/view/screen/support/support.dart';
 
 class Home02 extends StatefulWidget {
@@ -124,47 +128,55 @@ class _Home02State extends State<Home02> {
                             ),
                           ),
                         ),
-                        Container(
-                          height: 100,
-                          width: 100,
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                height: 80,
-                                width: 80,
-                                child: Card(
-                                  color: Colors.white,
-                                  child: Image.asset(
-                                    "images/investigation.png",
+                        InkWell(onTap: (){
+                          Get.to(()=>Investigation());
+                        },
+                          child: Container(
+                            height: 100,
+                            width: 100,
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  height: 80,
+                                  width: 80,
+                                  child: Card(
+                                    color: Colors.white,
+                                    child: Image.asset(
+                                      "images/investigation.png",
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Text("Investigation")
-                            ],
+                                Text("Investigation")
+                              ],
+                            ),
                           ),
                         )
                       ],
                     ),
                     Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Container(
-                          height: 100,
-                          width: 100,
-        
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                height: 80,
-                                width: 80,
-                                child: Card(
-                                  color: Colors.white,
-                                  child: Image.asset(
-                                    "images/doctor report.png",
+                        InkWell(onTap: (){
+                          Get.to(()=>DoctorReport());
+                        },
+                          child: Container(
+                            height: 100,
+                            width: 100,
+
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  height: 80,
+                                  width: 80,
+                                  child: Card(
+                                    color: Colors.white,
+                                    child: Image.asset(
+                                      "images/doctor report.png",
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Text("Doctor report")
-                            ],
+                                Text("Doctor report")
+                              ],
+                            ),
                           ),
                         ),
                         InkWell(onTap: (){
@@ -215,25 +227,29 @@ class _Home02State extends State<Home02> {
                     ),
                     Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Container(
-                          height: 100,
-                          width: 100,
-        
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                height: 80,
-                                width: 80,
-                                child: Card(
-                                  color: Colors.white,
-                                  child: Image.asset(
-                                    "images/faqt.png",
+                        InkWell(onTap: (){
+                          Get.to(()=>FAQ());
+                        },
+                          child: Container(
+                            height: 100,
+                            width: 100,
 
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  height: 80,
+                                  width: 80,
+                                  child: Card(
+                                    color: Colors.white,
+                                    child: Image.asset(
+                                      "images/faqt.png",
+
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Text("FAQ")
-                            ],
+                                Text("FAQ")
+                              ],
+                            ),
                           ),
                         ),
                         InkWell(onTap: (){
@@ -259,24 +275,28 @@ class _Home02State extends State<Home02> {
                             ),
                           ),
                         ),
-                        Container(
-                          height: 100,
-                          width: 100,
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                height: 80,
-                                width: 80,
-                                child: Card(
-                                  color: Colors.white,
-                                  child: Image.asset(
-                                    "images/settings.png",
+                        InkWell(onTap: (){
+                          Get.to(()=>Setting());
+                        },
+                          child: Container(
+                            height: 100,
+                            width: 100,
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  height: 80,
+                                  width: 80,
+                                  child: Card(
+                                    color: Colors.white,
+                                    child: Image.asset(
+                                      "images/settings.png",
 
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Text("Setting")
-                            ],
+                                Text("Setting")
+                              ],
+                            ),
                           ),
                         )
                       ],

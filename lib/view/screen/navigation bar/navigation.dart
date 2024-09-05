@@ -39,14 +39,15 @@ class NavigationBarShow extends StatelessWidget {
         bottomBarItems: const [
           BottomBarItem(
             inActiveItem: Icon(
-              Icons.category,
+              Icons.home_outlined,
               color: Colors.black,
             ),
             activeItem: Icon(
-              Icons.category_outlined,
+              Icons.home_outlined,
               color: Colors.white,
+
             ),
-            itemLabel: 'Category',
+            itemLabel: 'Home',
           ),
           BottomBarItem(
             inActiveItem: Icon(
@@ -62,15 +63,14 @@ class NavigationBarShow extends StatelessWidget {
           ),
           BottomBarItem(
             inActiveItem: Icon(
-              Icons.home_outlined,
+              Icons.category,
               color: Colors.black,
             ),
             activeItem: Icon(
-              Icons.home_outlined,
+              Icons.category_outlined,
               color: Colors.white,
-
             ),
-            itemLabel: 'Home',
+            itemLabel: 'Category',
           ),
         ],
         onTap: (index) {
