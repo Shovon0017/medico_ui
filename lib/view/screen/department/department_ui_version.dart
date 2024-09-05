@@ -1,18 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:medico/common%20widget/search_field.dart';
-import 'package:medico/view/screen/department/department_api_version.dart';
-import 'package:medico/view/screen/department/department_ui_version.dart';
+import 'package:medico/common%20widget/common_button.dart';
 
-class Home02 extends StatefulWidget {
-  const Home02({super.key});
+class Department_ui extends StatelessWidget {
+  const Department_ui({super.key});
 
-  @override
-  State<Home02> createState() => _Home02State();
-}
-
-class _Home02State extends State<Home02> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,34 +23,13 @@ class _Home02State extends State<Home02> {
           )
         ],
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal:10),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal:10),
+        child: SingleChildScrollView(
           child: Column(
             children: [
-              SearchField(onChanged: (String text) {}),
-              SizedBox(
-                height: 10,
-              ),
-              Container(
-                height: 120,
-                width: double.infinity,
-                child: Expanded(
-                  child: ListView.builder(
-                      itemCount: 3,
-                      padding: EdgeInsets.all(2),
-                      scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, index) {
-                        return Container(
-                          height: 120,
-                          width: 206,
-                          child: Image.asset("images/trand2.png"),
-                        );
-                      }),
-                ),
-              ),
               Text(
-                "Category",
+                "Department",
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
               ),
               SizedBox(
@@ -66,211 +37,274 @@ class _Home02State extends State<Home02> {
               ),
               Container(
                 height: 370,
-                width: 400,
+                width: double.infinity,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: Colors.grey[200]),
-                child: Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    borderRadius: BorderRadius.circular(15)),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Container(
-                          height: 100,
-                          width: 100,
-        
+                          height: 120,
+                          width: 90,
                           child: Column(
                             children: [
                               SizedBox(
                                 height: 80,
                                 width: 80,
                                 child: Card(
+                                  elevation: 5,
                                   color: Colors.white,
                                   child: Image.asset(
-                                    "images/hospital.png",
+                                    "images/Asthma.png",
                                   ),
                                 ),
                               ),
-                              Text("Hospital")
+                              Text("Asthma")
                             ],
                           ),
                         ),
                         Container(
-                          height: 100,
-                          width: 100,
+                          height: 120,
+                          width: 90,
                           child: Column(
                             children: [
                               SizedBox(
                                 height: 80,
                                 width: 80,
                                 child: Card(
+                                  elevation: 5,
                                   color: Colors.white,
                                   child: Image.asset(
-                                    "images/doctor.png",
+                                    "images/medicine.png",
                                   ),
                                 ),
                               ),
-                              Text("Doctor")
+                              Text("Medicine")
                             ],
                           ),
                         ),
                         Container(
-                          height: 100,
-                          width: 100,
+                          height: 120,
+                          width: 90,
                           child: Column(
                             children: [
                               SizedBox(
                                 height: 80,
                                 width: 80,
                                 child: Card(
+                                  elevation: 5,
                                   color: Colors.white,
                                   child: Image.asset(
-                                    "images/investigation.png",
+                                    "images/Surgery Tools.png",
                                   ),
                                 ),
                               ),
-                              Text("Investigation")
+                              Text("Sergery")
+                            ],
+                          ),
+                        ),
+                        Container(
+                          height: 120,
+                          width: 90,
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height: 80,
+                                width: 80,
+                                child: Card(
+                                  elevation: 5,
+                                  color: Colors.white,
+                                  child: Image.asset(
+                                    "images/pediatric-surgery 1.png",
+                                  ),
+                                ),
+                              ),
+                              Text("Pediatric")
                             ],
                           ),
                         )
                       ],
                     ),
-                    Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Container(
-                          height: 100,
-                          width: 100,
-        
+                          height: 120,
+                          width: 90,
                           child: Column(
                             children: [
                               SizedBox(
                                 height: 80,
                                 width: 80,
                                 child: Card(
+                                  elevation: 5,
                                   color: Colors.white,
                                   child: Image.asset(
-                                    "images/doctor report.png",
+                                    "images/Broken Teeth Pain.png",
                                   ),
                                 ),
                               ),
-                              Text("Doctor report")
+                              Text("Dentist")
                             ],
                           ),
                         ),
-                        InkWell(onTap: (){
-                          Get.to(()=>Department_ui());
-                        },
-                          child: Container(
-                            height: 100,
-                            width: 100,
-                            child: Column(
-                              children: [
-                                SizedBox(
-                                  height: 80,
-                                  width: 80,
-                                  child: Card(
-                                    color: Colors.white,
-                                    child: Image.asset(
-                                      "images/department.png",
-
-                                    ),
-                                  ),
-                                ),
-                                Text("Department")
-                              ],
-                            ),
-                          ),
-                        ),
                         Container(
-                          height: 100,
-                          width: 100,
+                          height: 120,
+                          width: 90,
                           child: Column(
                             children: [
                               SizedBox(
                                 height: 80,
                                 width: 80,
                                 child: Card(
+                                  elevation: 5,
                                   color: Colors.white,
                                   child: Image.asset(
-                                    "images/invite.png",
-
+                                    "images/respiratory-care 1.png",
                                   ),
                                 ),
                               ),
-                              Text("Invite")
+                              Text("Respiratory")
+                            ],
+                          ),
+                        ),
+                        Container(
+                          height: 120,
+                          width: 90,
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height: 80,
+                                width: 80,
+                                child: Card(
+                                  elevation: 5,
+                                  color: Colors.white,
+                                  child: Image.asset(
+                                    "images/gynaecology.png",
+                                  ),
+                                ),
+                              ),
+                              Text("Obs & Gynae")
+                            ],
+                          ),
+                        ),
+                        Container(
+                          height: 120,
+                          width: 90,
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height: 80,
+                                width: 80,
+                                child: Card(
+                                  elevation: 5,
+                                  color: Colors.white,
+                                  child: Image.asset(
+                                    "images/cardiogram 1.png",
+                                  ),
+                                ),
+                              ),
+                              Text("Cardiology")
                             ],
                           ),
                         )
                       ],
                     ),
-                    Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Container(
-                          height: 100,
-                          width: 100,
-        
+                          height: 120,
+                          width: 90,
                           child: Column(
                             children: [
                               SizedBox(
                                 height: 80,
                                 width: 80,
                                 child: Card(
+                                  elevation: 5,
                                   color: Colors.white,
                                   child: Image.asset(
-                                    "images/faqt.png",
-
+                                    "images/cancer 1.png",
                                   ),
                                 ),
                               ),
-                              Text("FAQ")
+                              Text("Cancer")
                             ],
                           ),
                         ),
                         Container(
-                          height: 100,
-                          width: 100,
+                          height: 120,
+                          width: 90,
                           child: Column(
                             children: [
                               SizedBox(
                                 height: 80,
                                 width: 80,
                                 child: Card(
+                                  elevation: 5,
                                   color: Colors.white,
                                   child: Image.asset(
-                                    "images/support.png",
-
+                                    "images/neuro.png",
                                   ),
                                 ),
                               ),
-                              Text("Support")
+                              Text("Neurologist")
                             ],
                           ),
                         ),
                         Container(
-                          height: 100,
-                          width: 100,
+                          height: 120,
+                          width: 90,
                           child: Column(
                             children: [
                               SizedBox(
                                 height: 80,
                                 width: 80,
                                 child: Card(
+                                  elevation: 5,
                                   color: Colors.white,
                                   child: Image.asset(
-                                    "images/settings.png",
-
+                                    "images/orthopedic.png",
                                   ),
                                 ),
                               ),
-                              Text("Setting")
+                              Text("Orthopedic")
+                            ],
+                          ),
+                        ),
+                        Container(
+                          height: 120,
+                          width: 90,
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height: 80,
+                                width: 80,
+                                child: Card(
+                                  elevation: 5,
+                                  color: Colors.white,
+                                  child: Image.asset(
+                                    "images/stethoscope 1.png",
+                                  ),
+                                ),
+                              ),
+                              Text("General Physician",maxLines: 2,textAlign: TextAlign.center,)
                             ],
                           ),
                         )
                       ],
-                    )
-        
+                    ),
                   ],
                 ),
-              )
+              ),
+              CommonButton(
+                  buttonColor: Color(0xff22A6FE),
+                  buttonName: "More Department",
+                  onTap: () {})
             ],
           ),
         ),
