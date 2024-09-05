@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medico/common%20widget/common_button.dart';
-import 'package:medico/view/screen/home/home.dart';
+import 'package:medico/view/screen/home%20api%20version/home.dart';
 
 class LanguageSelection extends StatelessWidget {
   const LanguageSelection({super.key});
