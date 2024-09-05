@@ -2,9 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:medico/common%20widget/search_field.dart';
+import 'package:medico/view/screen/Hospital_list/search_for_hospital.dart';
 
-class SearchScreen extends StatelessWidget {
-  const SearchScreen({super.key});
+class HospitalListSearch extends StatelessWidget {
+  const HospitalListSearch({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,8 @@ class SearchScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal:10),
           child: Column(
             children: [
-              SearchField(onChanged:(String text) {} ),
+              SearchFieldHospital(onChanged: (String Text){
+              }),
               SizedBox(height: 20),
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

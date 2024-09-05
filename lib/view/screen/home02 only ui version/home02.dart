@@ -2,8 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medico/common%20widget/search_field.dart';
+import 'package:medico/view/screen/Hospital_list/hospitalListSearch.dart';
 import 'package:medico/view/screen/department/department_api_version.dart';
 import 'package:medico/view/screen/department/department_ui_version.dart';
+import 'package:medico/view/screen/doctor%20list/doctorListSearch.dart';
 import 'package:medico/view/screen/support/support.dart';
 
 class Home02 extends StatefulWidget {
@@ -75,43 +77,51 @@ class _Home02State extends State<Home02> {
                   children: [
                     Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Container(
-                          height: 100,
-                          width: 100,
-        
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                height: 80,
-                                width: 80,
-                                child: Card(
-                                  color: Colors.white,
-                                  child: Image.asset(
-                                    "images/hospital.png",
+                        InkWell(onTap: (){
+                          Get.to(()=>HospitalListSearch());
+                        },
+                          child: Container(
+                            height: 100,
+                            width: 100,
+
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  height: 80,
+                                  width: 80,
+                                  child: Card(
+                                    color: Colors.white,
+                                    child: Image.asset(
+                                      "images/hospital.png",
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Text("Hospital")
-                            ],
+                                Text("Hospital")
+                              ],
+                            ),
                           ),
                         ),
-                        Container(
-                          height: 100,
-                          width: 100,
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                height: 80,
-                                width: 80,
-                                child: Card(
-                                  color: Colors.white,
-                                  child: Image.asset(
-                                    "images/doctor.png",
+                        InkWell(onTap: (){
+                          Get.to(()=>DoctorListSearch());
+                        },
+                          child: Container(
+                            height: 100,
+                            width: 100,
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  height: 80,
+                                  width: 80,
+                                  child: Card(
+                                    color: Colors.white,
+                                    child: Image.asset(
+                                      "images/doctor.png",
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Text("Doctor")
-                            ],
+                                Text("Doctor")
+                              ],
+                            ),
                           ),
                         ),
                         Container(

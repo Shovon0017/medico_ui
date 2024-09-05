@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:medico/common%20widget/common_button.dart';
 import 'package:medico/view/screen/home%20api%20version/home.dart';
 import 'package:medico/view/screen/home02%20only%20ui%20version/home02.dart';
+import 'package:medico/view/screen/navigation%20bar/navigation.dart';
 
 class LanguageSelection extends StatelessWidget {
   const LanguageSelection({super.key});
@@ -22,7 +23,7 @@ class LanguageSelection extends StatelessWidget {
             }),
             CommonButton(buttonColor:Color(0xff22A6FE) ,
                 buttonName: "English", onTap: (){
-              Get.to(()=>Home02());
+              Get.to(()=>NavigationBarShow());
             })
           ],
         ),
