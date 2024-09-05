@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:medico/common%20widget/search_field.dart';
 import 'package:medico/view/screen/department/department_api_version.dart';
 import 'package:medico/view/screen/department/department_ui_version.dart';
+import 'package:medico/view/screen/support/support.dart';
 
 class Home02 extends StatefulWidget {
   const Home02({super.key});
@@ -225,24 +226,27 @@ class _Home02State extends State<Home02> {
                             ],
                           ),
                         ),
-                        Container(
-                          height: 100,
-                          width: 100,
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                height: 80,
-                                width: 80,
-                                child: Card(
-                                  color: Colors.white,
-                                  child: Image.asset(
-                                    "images/support.png",
-
+                        InkWell(onTap: (){
+                          Get.to(()=>Support());
+                        },
+                          child: Container(
+                            height: 100,
+                            width: 100,
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  height: 80,
+                                  width: 80,
+                                  child: Card(
+                                    color: Colors.white,
+                                    child: Image.asset(
+                                      "images/support.png",
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Text("Support")
-                            ],
+                                Text("Support")
+                              ],
+                            ),
                           ),
                         ),
                         Container(

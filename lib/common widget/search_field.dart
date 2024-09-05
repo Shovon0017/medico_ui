@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SearchField extends StatelessWidget {
@@ -16,18 +17,20 @@ class SearchField extends StatelessWidget {
       onChanged: onChanged,
       decoration: InputDecoration(
         border: OutlineInputBorder(
-            borderSide: const BorderSide(color: Colors.black),
+            borderSide:  BorderSide(color: Colors.black),
             borderRadius: BorderRadius.circular(8)),
         enabledBorder: OutlineInputBorder(
-            borderSide: const BorderSide(color: Colors.black),
+            borderSide: BorderSide(color:CupertinoColors.systemGrey3),
             borderRadius: BorderRadius.circular(8)),
         focusedBorder: OutlineInputBorder(
-            borderSide: const BorderSide(color: Colors.black),
+            borderSide:  BorderSide(color: Colors.black),
             borderRadius: BorderRadius.circular(8)),
         labelText: "Search Hospital or Doctors",
-        // suffixIcon: InkWell(
-        //     onTap: onTap,
-        //     child: Icon(Icons.search))
+        suffixIcon: InkWell(
+            onTap: (){
+
+            },
+            child: Card(color:Colors.blue,child: Icon(Icons.search,color: Colors.white,)))
       ),
     );
   }
