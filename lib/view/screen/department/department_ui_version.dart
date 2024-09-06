@@ -41,19 +41,18 @@ class Department_ui extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15)),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Container(
                           height: 120,
-                          width: 90,
+                          width: 80,
                           child: Column(
                             children: [
                               SizedBox(
-                                height: 80,
-                                width: 80,
+                                height: 70,
+                                width: 70,
                                 child: Card(
                                   elevation: 5,
                                   color: Colors.white,
@@ -68,12 +67,12 @@ class Department_ui extends StatelessWidget {
                         ),
                         Container(
                           height: 120,
-                          width: 90,
+                          width: 80,
                           child: Column(
                             children: [
                               SizedBox(
-                                height: 80,
-                                width: 80,
+                                height: 70,
+                                width: 70,
                                 child: Card(
                                   elevation: 5,
                                   color: Colors.white,
@@ -88,12 +87,12 @@ class Department_ui extends StatelessWidget {
                         ),
                         Container(
                           height: 120,
-                          width: 90,
+                          width: 80,
                           child: Column(
                             children: [
                               SizedBox(
-                                height: 80,
-                                width: 80,
+                                height: 70,
+                                width: 70,
                                 child: Card(
                                   elevation: 5,
                                   color: Colors.white,
@@ -108,12 +107,12 @@ class Department_ui extends StatelessWidget {
                         ),
                         Container(
                           height: 120,
-                          width: 90,
+                          width: 80,
                           child: Column(
                             children: [
                               SizedBox(
-                                height: 80,
-                                width: 80,
+                                height: 70,
+                                width: 70,
                                 child: Card(
                                   elevation: 5,
                                   color: Colors.white,
@@ -128,17 +127,16 @@ class Department_ui extends StatelessWidget {
                         )
                       ],
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Container(
                           height: 120,
-                          width: 90,
+                          width: 80,
                           child: Column(
                             children: [
                               SizedBox(
-                                height: 80,
-                                width: 80,
+                                height: 70,
+                                width: 70,
                                 child: Card(
                                   elevation: 5,
                                   color: Colors.white,
@@ -153,12 +151,12 @@ class Department_ui extends StatelessWidget {
                         ),
                         Container(
                           height: 120,
-                          width: 90,
+                          width: 80,
                           child: Column(
                             children: [
                               SizedBox(
-                                height: 80,
-                                width: 80,
+                                height: 70,
+                                width: 70,
                                 child: Card(
                                   elevation: 5,
                                   color: Colors.white,
@@ -173,12 +171,12 @@ class Department_ui extends StatelessWidget {
                         ),
                         Container(
                           height: 120,
-                          width: 90,
+                          width: 80,
                           child: Column(
                             children: [
                               SizedBox(
-                                height: 80,
-                                width: 80,
+                                height: 70,
+                                width: 70,
                                 child: Card(
                                   elevation: 5,
                                   color: Colors.white,
@@ -193,12 +191,12 @@ class Department_ui extends StatelessWidget {
                         ),
                         Container(
                           height: 120,
-                          width: 90,
+                          width: 80,
                           child: Column(
                             children: [
                               SizedBox(
-                                height: 80,
-                                width: 80,
+                                height: 70,
+                                width: 70,
                                 child: Card(
                                   elevation: 5,
                                   color: Colors.white,
@@ -213,17 +211,16 @@ class Department_ui extends StatelessWidget {
                         )
                       ],
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Container(
                           height: 120,
-                          width: 90,
+                          width: 80,
                           child: Column(
                             children: [
                               SizedBox(
-                                height: 80,
-                                width: 80,
+                                height: 70,
+                                width: 70,
                                 child: Card(
                                   elevation: 5,
                                   color: Colors.white,
@@ -238,12 +235,12 @@ class Department_ui extends StatelessWidget {
                         ),
                         Container(
                           height: 120,
-                          width: 90,
+                          width: 80,
                           child: Column(
                             children: [
                               SizedBox(
-                                height: 80,
-                                width: 80,
+                                height: 70,
+                                width: 70,
                                 child: Card(
                                   elevation: 5,
                                   color: Colors.white,
@@ -258,12 +255,12 @@ class Department_ui extends StatelessWidget {
                         ),
                         Container(
                           height: 120,
-                          width: 90,
+                          width: 80,
                           child: Column(
                             children: [
                               SizedBox(
-                                height: 80,
-                                width: 80,
+                                height: 70,
+                                width: 70,
                                 child: Card(
                                   elevation: 5,
                                   color: Colors.white,
@@ -278,12 +275,12 @@ class Department_ui extends StatelessWidget {
                         ),
                         Container(
                           height: 120,
-                          width: 90,
+                          width: 80,
                           child: Column(
                             children: [
                               SizedBox(
-                                height: 80,
-                                width: 80,
+                                height: 70,
+                                width: 70,
                                 child: Card(
                                   elevation: 5,
                                   color: Colors.white,
