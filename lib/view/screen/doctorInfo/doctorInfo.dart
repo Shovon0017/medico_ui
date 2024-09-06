@@ -7,9 +7,31 @@ class DoctorInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(backgroundColor: Color(0xffFFFFFF),
       appBar: AppBar(
-        title: Text("data"),
+        backgroundColor: Color(0xffFFFFFF),
+        title: SizedBox(
+            height: 32,
+            width: 114,
+            child: Image.asset("images/splash logo.png")),
+        centerTitle: true,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 10),
+            child: Icon(Icons.notifications_active_outlined),
+          )
+        ],
+      ),
+      body: Center(
+        child:
+        Column(
+          children: [
+            Text("Doctor Info",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),),
+            Image.asset("name"),
+
+
+          ],
+        ),
       ),
     );
   }
