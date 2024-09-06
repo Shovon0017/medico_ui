@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class Paylater extends StatelessWidget {
@@ -23,10 +21,27 @@ class Paylater extends StatelessWidget {
         ],
       ),
       body: Center(
-        child: 
-        Column(
+        child: Column(
           children: [
-            Text("Appointment Info",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25),)
+            Text("Appointment Info",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25)),
+            Text("Appointment Form",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25)),
+            Text(
+              "Appointment Successfully Created",
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.green),
+            ),
+            SizedBox(
+              height: 150,
+              width: double.infinity,
+              child: Card(
+                elevation: 3,
+                color: Colors.red,
+              ),
+            )
           ],
         ),
       ),
