@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:medico/common%20widget/common_button.dart';
+import 'package:medico/view/screen/navigation%20bar/navigation.dart';
 
 class Paylater extends StatelessWidget {
   const Paylater({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold(backgroundColor: Color(0xffFFFFFF),
       appBar: AppBar(
         backgroundColor: Color(0xffFFFFFF),
         title: SizedBox(
@@ -23,10 +26,11 @@ class Paylater extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            Text("Appointment Info",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25)),
             Text("Appointment Form",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25)),
+            SizedBox(
+              height: 50,
+            ),
             Text(
               "Appointment Successfully Created",
               style: TextStyle(
@@ -39,9 +43,28 @@ class Paylater extends StatelessWidget {
               width: double.infinity,
               child: Card(
                 elevation: 3,
-                color: Colors.red,
+                color: Colors.white,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal:10),
+                  child: Container(child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Dear Sir, Amirul Islam Amir Comfirmed your Appointment wirh Assoc. Prof. Dr. Khandker Parvez Ahmed. SL: 5 Room: 801 (Level-8) Date: 28-08-2024. Delta Health Care, Mymensingh Ltd. Address: 55/5, Medical College Gate, Charpara, Mymensingh."),
+                   Text(" http://cmadical.com/appoinmenrt/aavbgfjhs45",style: TextStyle(color: Colors.blue),),
+                    ],
+                  )),
+                ),
               ),
-            )
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            CommonButton(
+                buttonColor: Colors.blue,
+                buttonWidth: 100,
+                buttonHeight: 30,
+                buttonName: "Complete", onTap: (){
+              Get.to(()=>NavigationBarShow());
+            })
           ],
         ),
       ),
