@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:medico/common%20widget/common_button.dart';
 
 class DoctorInfo extends StatelessWidget {
   const DoctorInfo({super.key});
@@ -24,13 +25,30 @@ class DoctorInfo extends StatelessWidget {
       ),
       body: Center(
         child:
-        Column(
-          children: [
-            Text("Doctor Info",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),),
-            Image.asset("name"),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal:10),
+          child: Column(
+            children: [
+              Text("Doctor Info",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),),
+              Image.asset("images/doctor images01.png"),
+              Text("Assoc. Prof. Dr. Khandker Parvez Ahmad",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+              Text("MBBS, Phd (Neurology) (ITALY))"),
+              Text("MSc (Endocrinology) (UK"),
+              CommonButton(
+                  buttonColor: Colors.blue,
+                  buttonName: "Booking Now", onTap: (){
+              }),
+              Row(
+                children: [
+                  Text("specialties:"),
+                  CommonButton(buttonColor: Colors.blue,buttonHeight: 25,buttonWidth: 120,
+                      buttonName: "Neurologist", onTap: (){
+                  })
+                ],
+              ),
 
-
-          ],
+            ],
+          ),
         ),
       ),
     );
