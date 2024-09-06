@@ -22,6 +22,14 @@ class Paylater extends StatelessWidget {
           )
         ],
       ),
+      body: Center(
+        child: 
+        Column(
+          children: [
+            Text("Appointment Info",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25),)
+          ],
+        ),
+      ),
     );
   }
 }
