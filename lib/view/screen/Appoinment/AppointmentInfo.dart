@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medico/common%20widget/common_button.dart';
+import 'package:medico/view/screen/payLater/payLater.dart';
 import 'package:medico/view/screen/paymentScreen/paymentscreen.dart';
 
 class AppointmentInfo extends StatelessWidget {
@@ -182,7 +183,7 @@ class AppointmentInfo extends StatelessWidget {
               CommonButton(
                 buttonColor: Colors.grey,
                   buttonName: "Pay Later", onTap: (){
-
+                  Get.to(()=>Paylater());
               })
             ],
           ),
