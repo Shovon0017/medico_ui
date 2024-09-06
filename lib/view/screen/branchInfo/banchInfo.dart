@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medico/common%20widget/common_button.dart';
 import 'package:medico/view/screen/doctorInfo/doctorInfo.dart';
+import 'package:medico/view/screen/hospitalInfo/hospitalInfo.dart';
 
 class BranchInfo extends StatelessWidget {
   const BranchInfo({super.key});
@@ -40,15 +41,102 @@ class BranchInfo extends StatelessWidget {
               ),
               Text("Delta Health Care, Mymensingh Ltd",style: TextStyle(fontSize: 23),),
               SizedBox(height: 150,
-              width: 340,child: Card(
+              width: 340,child: Card(color: Colors.white,
                   elevation: 3,
                   child: Column(
                     children: [
-                      Row(
+                      Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-
+                          InkWell(onTap: (){
+                            Get.to(()=>HospitalInfo());
+                          },
+                            child: Row(
+                                children: [
+                                  Icon(Icons.info_outline_rounded),
+                                  Text("About",style: TextStyle(fontSize: 15)),
+                                ]
+                            ),
+                          ),
+                          Row(crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Icon(Icons.phone),
+                                Text("Branch call",style: TextStyle(fontSize: 15)),
+                                Icon(Icons.arrow_drop_down),
+                              ]
+                          ),
                         ],
-                      )
+                      ),
+                      SizedBox(height: 15),
+                      Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(children: [
+                            Text(
+                              "Type:",
+                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                            ),
+                            CommonButton(
+                                buttonColor: Colors.blue,
+                                buttonHeight: 25,
+                                buttonWidth: 120,
+                                buttonName: "Specialties",
+                                onTap: () {}),
+                          ],),
+
+                          Row(
+                            children: [
+                              RichText(
+                                  text: TextSpan(children: [
+                                    TextSpan(
+                                        text: "Experience:",
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black,
+                                            fontSize: 15)),
+                                    TextSpan(
+                                        text: "8+ Years",
+                                        style: TextStyle(fontSize: 15, color: Colors.black))
+                                  ])),
+                            ],
+                          )
+                        ],
+                      ),
+                      SizedBox(height: 15),
+                      Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                              children: [
+                                RichText(
+                                    text: TextSpan(children: [
+                                      TextSpan(
+                                          text: "Total Branch:",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.black,
+                                              fontSize: 15)),
+                                      TextSpan(
+                                          text: "4",
+                                          style: TextStyle(fontSize: 15, color: Colors.black))
+                                    ])),
+                              ]
+                          ),
+                          Row(crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                RichText(
+                                    text: TextSpan(children: [
+                                      TextSpan(
+                                          text: "Branch No:",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.black,
+                                              fontSize: 15)),
+                                      TextSpan(
+                                          text: "D3",
+                                          style: TextStyle(fontSize: 15, color: Colors.black))
+                                    ])),
+                              ]
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),
