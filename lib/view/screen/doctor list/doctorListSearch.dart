@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:medico/common%20widget/common_button.dart';
 import 'package:medico/common%20widget/search_field.dart';
 import 'package:medico/view/screen/doctor%20list/widget/search_for_doctor.dart';
+import 'package:medico/view/screen/doctorInfo/doctorInfo.dart';
 
 class DoctorListSearch extends StatelessWidget {
   const DoctorListSearch({super.key});
@@ -58,90 +60,94 @@ class DoctorListSearch extends StatelessWidget {
                       return SizedBox(
                         height: 250,
                         width: double.infinity,
-                        child: Card(
-                          elevation: 5,
-                          color: Color(0xffFFFFFF),
-                          child: Row(
-                            children: [
-                              Container(
-                                child: Image.asset("images/doctorPic.png",
-                                    fit: BoxFit.fill),
-                              ),
-                              SizedBox(width: 20),
-                              Expanded(
-                                child: Container(
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        "Assoc. Prof. Dr. Khandker Parvez Ahmad",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 20),
-                                      ),
-                                      SizedBox(height: 5),
-                                      Row(
-                                        children: [
-                                          Text(
-                                            "Specialties:",
-                                            style: TextStyle(
-                                                fontWeight: FontWeight.bold),
-                                          ),
-                                          CommonButton(
-                                              buttonWidth: 110,
-                                              buttonHeight: 25,
-                                              buttonColor: Colors.blue,
-                                              buttonName: "Neurologist",
-                                              onTap: () {})
-                                        ],
-                                      ),
-                                      Text("MBBS, Phd (Neurology) (ITALY), MSc (Endocrinology) (UK)"),
-                                      SizedBox(height: 5),
-                                      RichText(
-                                          text: TextSpan(children: [
-                                        TextSpan(
-                                            text: "Working:",
-                                            style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                                color: Colors.black)),
-                                        TextSpan(
-                                            text: "Victoria Healthcare",
-                                            style:
-                                                TextStyle(color: Colors.black))
-                                      ])),
-                                      SizedBox(height: 5),
-                                      RichText(
-                                          text: TextSpan(children: [
-                                        TextSpan(
-                                            text: "BMDC Number:",
-                                            style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                                color: Colors.black)),
-                                        TextSpan(
-                                            text: "M37103",
-                                            style:
-                                                TextStyle(color: Colors.black))
-                                      ])),
-                                      SizedBox(height: 5),
-                                      RichText(
-                                          text: TextSpan(children: [
-                                        TextSpan(
-                                            text: "experience:",
-                                            style: TextStyle(
-                                                fontWeight: FontWeight.bold,
-                                                color: Colors.black)),
-                                        TextSpan(
-                                            text: "17+ Years",
-                                            style:
-                                                TextStyle(color: Colors.black))
-                                      ]))
-                                    ],
-                                  ),
+                        child: InkWell(onTap: (){
+                          Get.to(()=>DoctorInfo());
+                        },
+                          child: Card(
+                            elevation: 5,
+                            color: Color(0xffFFFFFF),
+                            child: Row(
+                              children: [
+                                Container(
+                                  child: Image.asset("images/doctorPic.png",
+                                      fit: BoxFit.fill),
                                 ),
-                              )
-                            ],
+                                SizedBox(width: 20),
+                                Expanded(
+                                  child: Container(
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "Assoc. Prof. Dr. Khandker Parvez Ahmad",
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 20),
+                                        ),
+                                        SizedBox(height: 5),
+                                        Row(
+                                          children: [
+                                            Text(
+                                              "Specialties:",
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            CommonButton(
+                                                buttonWidth: 110,
+                                                buttonHeight: 25,
+                                                buttonColor: Colors.blue,
+                                                buttonName: "Neurologist",
+                                                onTap: () {})
+                                          ],
+                                        ),
+                                        Text("MBBS, Phd (Neurology) (ITALY), MSc (Endocrinology) (UK)"),
+                                        SizedBox(height: 5),
+                                        RichText(
+                                            text: TextSpan(children: [
+                                          TextSpan(
+                                              text: "Working:",
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.black)),
+                                          TextSpan(
+                                              text: "Victoria Healthcare",
+                                              style:
+                                                  TextStyle(color: Colors.black))
+                                        ])),
+                                        SizedBox(height: 5),
+                                        RichText(
+                                            text: TextSpan(children: [
+                                          TextSpan(
+                                              text: "BMDC Number:",
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.black)),
+                                          TextSpan(
+                                              text: "M37103",
+                                              style:
+                                                  TextStyle(color: Colors.black))
+                                        ])),
+                                        SizedBox(height: 5),
+                                        RichText(
+                                            text: TextSpan(children: [
+                                          TextSpan(
+                                              text: "experience:",
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.black)),
+                                          TextSpan(
+                                              text: "17+ Years",
+                                              style:
+                                                  TextStyle(color: Colors.black))
+                                        ]))
+                                      ],
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       );
