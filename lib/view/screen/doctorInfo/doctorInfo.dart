@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:medico/common%20widget/common_button.dart';
+import 'package:medico/view/screen/Appoinment/AppointmentInfo.dart';
 
 class DoctorInfo extends StatelessWidget {
   const DoctorInfo({super.key});
@@ -42,7 +44,9 @@ class DoctorInfo extends StatelessWidget {
                 CommonButton(
                     buttonColor: Colors.blue,
                     buttonName: "Booking Now",
-                    onTap: () {}),
+                    onTap: () {
+                      Get.to(()=>AppointmentInfo());
+                    }),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

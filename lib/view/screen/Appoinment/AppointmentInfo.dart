@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:medico/common%20widget/common_button.dart';
+import 'package:medico/view/screen/paymentScreen/paymentscreen.dart';
 
 class AppointmentInfo extends StatelessWidget {
   const AppointmentInfo({super.key});
@@ -175,7 +177,7 @@ class AppointmentInfo extends StatelessWidget {
               CommonButton(
                   buttonColor: Colors.blue,
                   buttonName: "Payment For Booking", onTap: (){
-                
+                Get.to(()=>PaymentScreen());
               }),
               CommonButton(
                 buttonColor: Colors.grey,
