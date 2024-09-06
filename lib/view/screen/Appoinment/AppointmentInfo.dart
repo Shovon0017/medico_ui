@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medico/common%20widget/common_button.dart';
 
 class AppointmentInfo extends StatelessWidget {
   const AppointmentInfo({super.key});
@@ -44,9 +45,11 @@ class AppointmentInfo extends StatelessWidget {
                     style: TextStyle(fontSize: 15, color: Colors.black))
               ])),
               SizedBox(height: 20),
-              Text(
-                "Patient Info",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+              Center(
+                child: Text(
+                  "Patient Info",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                ),
               ),
               SizedBox(height: 10),
               RichText(
@@ -78,7 +81,7 @@ class AppointmentInfo extends StatelessWidget {
               RichText(
                   text: TextSpan(children: [
                 TextSpan(
-                    text: "type:",
+                    text: "Type:",
                     style: TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
@@ -91,7 +94,7 @@ class AppointmentInfo extends StatelessWidget {
               RichText(
                   text: TextSpan(children: [
                 TextSpan(
-                    text: "gender:",
+                    text: "Gender:",
                     style: TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
@@ -104,7 +107,7 @@ class AppointmentInfo extends StatelessWidget {
               RichText(
                   text: TextSpan(children: [
                 TextSpan(
-                    text: "chamber:",
+                    text: "Chamber:",
                     style: TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
@@ -133,7 +136,7 @@ class AppointmentInfo extends StatelessWidget {
               RichText(
                   text: TextSpan(children: [
                 TextSpan(
-                    text: "address:",
+                    text: "Address:",
                     style: TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
@@ -146,7 +149,7 @@ class AppointmentInfo extends StatelessWidget {
               RichText(
                   text: TextSpan(children: [
                 TextSpan(
-                    text: "contact:",
+                    text: "Contact:",
                     style: TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
@@ -168,6 +171,17 @@ class AppointmentInfo extends StatelessWidget {
                     text: "1800 Tk",
                     style: TextStyle(fontSize: 15, color: Colors.black))
               ])),
+              SizedBox(height: 10),
+              CommonButton(
+                  buttonColor: Colors.blue,
+                  buttonName: "Payment For Booking", onTap: (){
+                
+              }),
+              CommonButton(
+                buttonColor: Colors.grey,
+                  buttonName: "Pay Later", onTap: (){
+
+              })
             ],
           ),
         ),
