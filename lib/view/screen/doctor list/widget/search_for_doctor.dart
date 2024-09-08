@@ -1,13 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:medico/common%20widget/AlertDialog/alertdialog.dart';
+import 'package:medico/common%20widget/common_button.dart';
 
 class SearchFieldDoctor extends StatelessWidget {
   const SearchFieldDoctor({super.key,
-    // required this.searchController,
-    // required this.onTap,
     required this.onChanged});
-  // final TextEditingController searchController;
-  // final VoidCallback onTap;
   final void Function(String) onChanged;
 
   @override
@@ -28,9 +27,9 @@ class SearchFieldDoctor extends StatelessWidget {
           labelText: "Search Doctors",
           suffixIcon: InkWell(
               onTap: (){
-
+                Get.to(()=>AlertDiaLogShow());
               },
-              child: Card(color:Colors.blue,child: Icon(Icons.search,color: Colors.white,)))
+              child: Card(color:Colors.blue,child: Icon(Icons.filter_alt_sharp,color: Colors.white,)))
       ),
     );
   }

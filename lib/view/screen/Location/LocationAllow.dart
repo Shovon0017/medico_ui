@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medico/common%20widget/common_button.dart';
 import 'package:medico/view/screen/home02%20only%20ui%20version/home02.dart';
-
+import 'package:medico/view/screen/navigation%20bar/navigation.dart';
 class LocationAllow extends StatelessWidget {
   const LocationAllow({super.key});
 
@@ -22,7 +22,7 @@ class LocationAllow extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20)
               ),
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal:10),
+                padding: const EdgeInsets.symmetric(horizontal:20),
                 child: Column(mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(Icons.location_on_outlined),
@@ -65,17 +65,17 @@ class LocationAllow extends StatelessWidget {
                     CommonButton(
                         buttonColor: Color(0xffD2E4FC),
                         buttonName: "While using the app",textColor: Colors.black, onTap: (){
-                      Get.to(()=>Home02());
+                      Get.to(()=>NavigationBarShow());
                     }),
                     CommonButton(
                         buttonColor: Color(0xffD2E4FC),
                         buttonName: "Only this time",textColor: Colors.black, onTap: (){
-                      Get.to(()=>Home02());
+                      Get.to(()=>NavigationBarShow());
                     }),
                     CommonButton(
                         buttonColor: Color(0xffD2E4FC),
                         buttonName: "Don’t allow",textColor: Colors.black, onTap: (){
-                      Get.to(()=>Home02());
+                      Get.to(()=>NavigationBarShow());
                     })
                   ],
                 ),
