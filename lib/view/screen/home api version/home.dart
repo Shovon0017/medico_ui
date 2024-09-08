@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:medico/common%20widget/CommonIcon.dart';
 import 'package:medico/common%20widget/search_field.dart';
+import 'package:medico/view/screen/notification/notification.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -22,7 +25,9 @@ class _HomeState extends State<Home> {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 10),
-            child: Icon(Icons.notifications_active_outlined),
+            child: CommonIconButton(onTap: (){
+              Get.to(()=>NotificationShow());
+            }),
           )
         ],
       ),

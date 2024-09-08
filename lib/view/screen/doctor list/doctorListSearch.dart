@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:medico/common%20widget/CommonIcon.dart';
 import 'package:medico/common%20widget/common_button.dart';
 import 'package:medico/common%20widget/search_field.dart';
 import 'package:medico/view/screen/doctor%20list/widget/search_for_doctor.dart';
 import 'package:medico/view/screen/doctorInfo/doctorInfo.dart';
+import 'package:medico/view/screen/notification/notification.dart';
 
 class DoctorListSearch extends StatelessWidget {
   const DoctorListSearch({super.key});
@@ -22,7 +24,9 @@ class DoctorListSearch extends StatelessWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 10),
-            child: Icon(Icons.notifications_active_outlined),
+            child: CommonIconButton(onTap: (){
+              Get.to(()=>NotificationShow());
+            }),
           )
         ],
       ),

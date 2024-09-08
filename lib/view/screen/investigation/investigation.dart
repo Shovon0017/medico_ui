@@ -1,9 +1,12 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:medico/common%20widget/CommonIcon.dart';
 import 'package:medico/common%20widget/search_field.dart';
 import 'package:medico/view/screen/Hospital_list/search_for_hospital.dart';
 import 'package:medico/view/screen/investigation/search_investigation.dart';
+import 'package:medico/view/screen/notification/notification.dart';
 
 class Investigation extends StatelessWidget {
   const Investigation({super.key});
@@ -21,7 +24,9 @@ class Investigation extends StatelessWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 10),
-            child: Icon(Icons.notifications_active_outlined),
+            child: CommonIconButton(onTap: (){
+              Get.to(()=>NotificationShow());
+            }),
           )
         ],
       ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:medico/common%20widget/CommonIcon.dart';
 import 'package:medico/common%20widget/common_button.dart';
+import 'package:medico/view/screen/notification/notification.dart';
 
 class Department_ui extends StatelessWidget {
   const Department_ui({super.key});
@@ -19,7 +21,9 @@ class Department_ui extends StatelessWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 10),
-            child: Icon(Icons.notifications_active_outlined),
+            child: CommonIconButton(onTap: (){
+              Get.to(()=>NotificationShow());
+            }),
           )
         ],
       ),

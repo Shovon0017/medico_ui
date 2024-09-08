@@ -2,9 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:medico/common%20widget/CommonIcon.dart';
 import 'package:medico/common%20widget/common_button.dart';
 import 'package:medico/view/screen/home02%20only%20ui%20version/home02.dart';
 import 'package:medico/view/screen/navigation%20bar/navigation.dart';
+import 'package:medico/view/screen/notification/notification.dart';
 
 class PaymentScreen extends StatelessWidget {
   const PaymentScreen({super.key});
@@ -22,7 +24,9 @@ class PaymentScreen extends StatelessWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 10),
-            child: Icon(Icons.notifications_active_outlined),
+            child: CommonIconButton(onTap: (){
+              Get.to(()=>NotificationShow());
+            }),
           )
         ],
       ),

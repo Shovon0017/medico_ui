@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:medico/common%20widget/CommonIcon.dart';
 import 'package:medico/common%20widget/search_field.dart';
 import 'package:medico/view/screen/Doctor_Report/doctor_report.dart';
 import 'package:medico/view/screen/FAQ/FAQ.dart';
@@ -9,6 +10,7 @@ import 'package:medico/view/screen/department/department_api_version.dart';
 import 'package:medico/view/screen/department/department_ui_version.dart';
 import 'package:medico/view/screen/doctor%20list/doctorListSearch.dart';
 import 'package:medico/view/screen/investigation/investigation.dart';
+import 'package:medico/view/screen/notification/notification.dart';
 import 'package:medico/view/screen/setting/setting.dart';
 import 'package:medico/view/screen/support/support.dart';
 
@@ -34,7 +36,9 @@ class _Home02State extends State<Home02> {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 10),
-            child: Icon(Icons.notifications_active_outlined),
+            child: CommonIconButton(onTap: (){
+              Get.to(()=>NotificationShow());
+            }),
           )
         ],
       ),
