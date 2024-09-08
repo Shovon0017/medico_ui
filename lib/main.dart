@@ -13,6 +13,7 @@ import 'package:medico/view/screen/home02%20only%20ui%20version/home02.dart';
 import 'package:medico/view/screen/hospitalInfo/hospitalInfo.dart';
 import 'package:medico/view/screen/investigation/investigation.dart';
 import 'package:medico/view/screen/navigation%20bar/navigation.dart';
+import 'package:medico/view/screen/notification/notification.dart';
 import 'package:medico/view/screen/payLater/payLater.dart';
 import 'package:medico/view/screen/paymentScreen/paymentscreen.dart';
 import 'package:medico/view/screen/setting/setting.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(debugShowCheckedModeBanner: false,
-      home: Splash(),
+      home: NotificationShow(),
     );
   }
 }
