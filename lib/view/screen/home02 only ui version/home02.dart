@@ -207,24 +207,34 @@ class _Home02State extends State<Home02> {
                             ),
                           ),
                         ),
-                        Container(
-                          height: 100,
-                          width: 100,
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                height: 80,
-                                width: 80,
-                                child: Card(
-                                  color: Colors.white,
-                                  child: Image.asset(
-                                    "images/invite.png",
+                        InkWell(onTap: (){
+                          Get.defaultDialog(
+                            title: "Send Invitation",
+                            content: Text("Invite By SMS",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17),),
+                            actions: [
+                              Text("Share",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17),)
+                            ]
+                          );
+                        },
+                          child: Container(
+                            height: 100,
+                            width: 100,
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  height: 80,
+                                  width: 80,
+                                  child: Card(
+                                    color: Colors.white,
+                                    child: Image.asset(
+                                      "images/invite.png",
 
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Text("Invite")
-                            ],
+                                Text("Invite")
+                              ],
+                            ),
                           ),
                         )
                       ],
