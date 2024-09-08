@@ -27,7 +27,7 @@ class SearchFieldDoctor extends StatelessWidget {
           labelText: "Search Doctors",
           suffixIcon: InkWell(
               onTap: (){
-                Get.to(()=>AlertDiaLogShow());
+                AlertDiaLogShow();
               },
               child: Card(color:Colors.blue,child: Icon(Icons.filter_alt_sharp,color: Colors.white,)))
       ),
