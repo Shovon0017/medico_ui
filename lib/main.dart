@@ -3,6 +3,7 @@ import 'package:get/get_navigation/get_navigation.dart';
 import 'package:medico/view/screen/Appoinment/AppointmentInfo.dart';
 import 'package:medico/view/screen/Doctor_Report/doctor_report.dart';
 import 'package:medico/view/screen/FAQ/FAQ.dart';
+import 'package:medico/view/screen/Location/LocationAllow.dart';
 import 'package:medico/view/screen/branchInfo/banchInfo.dart';
 import 'package:medico/view/screen/category/category.dart';
 import 'package:medico/view/screen/department/department_api_version.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(debugShowCheckedModeBanner: false,
-      home: Home02(),
+      home: LocationAllow(),
     );
   }
 }
