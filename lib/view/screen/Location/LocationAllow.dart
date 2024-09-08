@@ -1,6 +1,9 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:medico/common%20widget/common_button.dart';
+import 'package:medico/view/screen/home02%20only%20ui%20version/home02.dart';
 
 class LocationAllow extends StatelessWidget {
   const LocationAllow({super.key});
@@ -20,25 +23,60 @@ class LocationAllow extends StatelessWidget {
               ),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal:10),
-                child: Column(
+                child: Column(mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(Icons.location_on_outlined),
-                    Text("Allow Maps to access this device’s precise location?",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25)),
-                    Row(
+                    Text("Allow Maps to access this device’s precise location?",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20,)),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
                           height: 160,
                           width: 130,
-                          color: Colors.red,
                           child: Column(
                             children: [
-                              Image.asset("name"),
-                              Text("Precise")
+                              Image.asset("images/Precise Img.png"),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text("Precise",style: TextStyle(fontSize: 17),)
                             ],
                           ),
-                        )
+                        ),
+                        Container(
+                          height: 160,
+                          width: 130,
+                          child: Column(
+                            children: [
+                              Image.asset("images/Approx Img.png"),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text("Approximate",style: TextStyle(fontSize: 17),)
+                            ],
+                          ),
+                        ),
                       ],
-                    )
+                    ),SizedBox(
+                      height: 30,
+                    ),
+                    CommonButton(
+                        buttonColor: Color(0xffD2E4FC),
+                        buttonName: "While using the app",textColor: Colors.black, onTap: (){
+                      Get.to(()=>Home02());
+                    }),
+                    CommonButton(
+                        buttonColor: Color(0xffD2E4FC),
+                        buttonName: "Only this time",textColor: Colors.black, onTap: (){
+                      Get.to(()=>Home02());
+                    }),
+                    CommonButton(
+                        buttonColor: Color(0xffD2E4FC),
+                        buttonName: "Don’t allow",textColor: Colors.black, onTap: (){
+                      Get.to(()=>Home02());
+                    })
                   ],
                 ),
               ),
