@@ -32,6 +32,7 @@ class DoctorReport extends StatelessWidget {
           children: [
             Text("Doctor Report",
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+
           ],
         ),
       ),

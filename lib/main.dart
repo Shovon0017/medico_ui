@@ -10,6 +10,7 @@ import 'package:medico/view/screen/department/department_api_version.dart';
 import 'package:medico/view/screen/department/department_ui_version.dart';
 import 'package:medico/view/screen/doctor%20list/doctorListSearch.dart';
 import 'package:medico/view/screen/doctorInfo/doctorInfo.dart';
+import 'package:medico/view/screen/home%20api%20version/home.dart';
 import 'package:medico/view/screen/home02%20only%20ui%20version/home02.dart';
 import 'package:medico/view/screen/hospitalInfo/hospitalInfo.dart';
 import 'package:medico/view/screen/investigation/investigation.dart';

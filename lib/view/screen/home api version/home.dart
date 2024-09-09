@@ -1,8 +1,11 @@
+import 'dart:developer';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medico/common%20widget/CommonIcon.dart';
 import 'package:medico/common%20widget/search_field.dart';
+import 'package:medico/controller/getX%20controller/categoryList.dart';
 import 'package:medico/view/screen/notification/notification.dart';
 
 class Home extends StatefulWidget {
@@ -15,6 +18,8 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
+    CategoryListController controller =Get.put(CategoryListController());
+    log("${controller.category.length}");
     return Scaffold(backgroundColor:Color(0xffFFFFFF),
       appBar: AppBar(backgroundColor:Color(0xffFFFFFF),
         title: SizedBox(
@@ -41,31 +46,25 @@ class _HomeState extends State<Home> {
           Container(
             height: 120,
             width: double.infinity,
-            child: Expanded(
-              child: ListView.builder(
-                itemCount: 3,padding: EdgeInsets.all(2),
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (context,index){
-                  return Container(
-                    height: 120,
-                    width: 206,
+            child: ListView.builder(
+              itemCount: 3,padding: EdgeInsets.all(2),
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context,index){
+                return Container(
+                  height: 120,
+                  width: 206,
 
-                    child: Image.asset("images/trand2.png"),
-                  );
-              }),
-            ),
+                  child: Image.asset("images/trand2.png"),
+                );
+            }),
           ),
           Text("Category",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
           SizedBox(
             height: 30,
           ),
-          Container(
-            height: 370,
-            width: 400,
-            decoration: BoxDecoration(borderRadius:BorderRadius.circular(15),color: Colors.grey[200]),
-            child: Padding(
-              padding: const EdgeInsets.all(20),
-              child: GridView.builder(itemCount: 9,
+          Obx(()=>
+            Expanded(
+              child: GridView.builder(itemCount: controller.category.length,
                   shrinkWrap: true,
                   physics:PageScrollPhysics(),
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3,
@@ -74,19 +73,12 @@ class _HomeState extends State<Home> {
                     crossAxisSpacing: 10
                   ), itemBuilder: (context,index){
                 return Container(
-                  child: Center(
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          height: 80,
-                          width: 80,
-                          child: Card(
-                            color: Colors.red,
-                          ),
-                        ),
-                        Text("Name")
-                      ],
-                    ),
+                  color: Colors.red,
+                  child: Column(
+                    children: [
+                      Image.asset("${controller.category[index].image}"),
+                      Text("${controller.category[index].name}")
+                    ],
                   ),
                 );
                   }),
