@@ -49,7 +49,28 @@ class DoctorInfo extends StatelessWidget {
                     buttonColor: Colors.blue,
                     buttonName: "Booking Now",
                     onTap: () {
-                      Get.to(()=>AppointmentInfo());
+                      Get.defaultDialog(
+                        title: "Select Chamber",
+                        content:Column(
+                          children: [
+                            CommonButton(
+                                buttonColor: Colors.grey[400],
+
+                                buttonName: "Victoria Healthcare",textColor: Colors.black, onTap: (){
+
+                            }),
+                            CommonButton(buttonName: "Delta Health Care, Mymensingh Ltd", onTap: (){
+
+                            }),
+                            CommonButton(
+                                buttonColor: Colors.grey[400],
+
+                                buttonName: "Labaid Diagnostic Mymensingh ",textColor: Colors.black, onTap: (){
+
+                            })
+                          ],
+                        )
+                      );
                     }),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
