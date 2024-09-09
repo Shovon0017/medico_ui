@@ -1,14 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 import 'package:get/get.dart';
 import 'package:medico/common%20widget/AlertDialog/alertdialog.dart';
 import 'package:medico/common%20widget/common_button.dart';
+import 'package:medico/common%20widget/common_text_field.dart';
+import 'package:medico/view/screen/doctor%20list/doctorListSearch.dart';
 
 class SearchFieldDoctor extends StatelessWidget {
-  const SearchFieldDoctor({super.key,
+   SearchFieldDoctor({super.key,
     required this.onChanged});
   final void Function(String) onChanged;
-
+var value=-1;
   @override
   Widget build(BuildContext context) {
     return TextField(
@@ -27,7 +30,34 @@ class SearchFieldDoctor extends StatelessWidget {
           labelText: "Search Doctors",
           suffixIcon: InkWell(
               onTap: (){
-                AlertDiaLogShow();
+                Get.defaultDialog(
+                  title: "Filter",titleStyle: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold),
+                  content:Column(
+                    children: [
+                      DropdownButtonFormField(decoration: InputDecoration(border: OutlineInputBorder(borderSide: BorderSide(color: Colors.black))),
+                      value: value,
+                      items:[DropdownMenuItem(child: Text("Designation"),value: -1,),
+                        DropdownMenuItem(child: Text("Designation"),value: 0),
+                        DropdownMenuItem(child: Text("Designation"),value: 1),
+                        DropdownMenuItem(child: Text("Designation"),value: 2)],onChanged: (v){
+                      }),
+                      DropdownButtonFormField(
+                          value: value,
+                          items:[DropdownMenuItem(child: Text("Designation"),value: -1,),
+                            DropdownMenuItem(child: Text("Designation"),value: 0),
+                            DropdownMenuItem(child: Text("Designation"),value: 1),
+                            DropdownMenuItem(child: Text("Designation"),value: 2)],onChanged: (v){
+                      }),
+                      DropdownButtonFormField(
+                          value: value,
+                          items:[DropdownMenuItem(child: Text("Designation"),value: -1,),
+                            DropdownMenuItem(child: Text("Designation"),value: 0),
+                            DropdownMenuItem(child: Text("Designation"),value: 1),
+                            DropdownMenuItem(child: Text("Designation"),value: 2)],onChanged: (v){
+                      }),CommonButton(buttonName: "Search", onTap: ()=>Get.back())
+                    ],
+                  )
+                );
               },
               child: Card(color:Colors.blue,child: Icon(Icons.filter_alt_sharp,color: Colors.white,)))
       ),

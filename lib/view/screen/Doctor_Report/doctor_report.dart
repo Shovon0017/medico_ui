@@ -42,7 +42,7 @@ class DoctorReport extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              CommonTextField(Controller: TextEditingController(), hinText: "Type Your Phone Number"),
+              CommonTextField(Controller: TextEditingController(), hinText: "Type Your Phone Number", icon: null, color: Colors.grey),
               SizedBox(
                 height: 10,
               ),

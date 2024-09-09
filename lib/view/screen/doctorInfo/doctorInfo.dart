@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:medico/common%20widget/AlertDialog/alertdialog.dart';
 import 'package:medico/common%20widget/CommonIcon.dart';
 import 'package:medico/common%20widget/common_button.dart';
+import 'package:medico/common%20widget/common_text_field.dart';
 import 'package:medico/view/screen/Appoinment/AppointmentInfo.dart';
 import 'package:medico/view/screen/notification/notification.dart';
+import 'package:medico/view/screen/popupscreen/popupscreen.dart';
 
 class DoctorInfo extends StatelessWidget {
   const DoctorInfo({super.key});
@@ -22,8 +25,8 @@ class DoctorInfo extends StatelessWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 10),
-            child: CommonIconButton(onTap: (){
-              Get.to(()=>NotificationShow());
+            child: CommonIconButton(onTap: () {
+              Get.to(() => NotificationShow());
             }),
           )
         ],
@@ -50,34 +53,72 @@ class DoctorInfo extends StatelessWidget {
                     buttonName: "Booking Now",
                     onTap: () {
                       Get.defaultDialog(
-                        title: "Select Chamber",
-                        content:Column(
-                          children: [
-                            CommonButton(
-                                buttonColor: Colors.grey[400],
-
-                                buttonName: "Victoria Healthcare",textColor: Colors.black, onTap: (){
-
-                            }),
-                            CommonButton(buttonName: "Delta Health Care, Mymensingh Ltd", onTap: (){
-
-                            }),
-                            CommonButton(
-                                buttonColor: Colors.grey[400],
-
-                                buttonName: "Labaid Diagnostic Mymensingh ",textColor: Colors.black, onTap: (){
-
-                            })
-                          ],
-                        )
-                      );
+                          title: "Select Chamber",
+                          content: Column(
+                            children: [
+                              CommonButton(
+                                  buttonColor: Colors.grey[400],
+                                  buttonName: "Victoria Healthcare",
+                                  textColor: Colors.black,
+                                  onTap: () {}),
+                              CommonButton(
+                                  buttonName:
+                                      "Delta Health Care, Mymensingh Ltd",
+                                  onTap: () {
+                                    Get.defaultDialog(
+                                        title: "Book Appointment",
+                                        content: Column(
+                                          children: [
+                                            CommonTextField(
+                                              Controller:
+                                                  TextEditingController(),
+                                              hinText: "Patient Name",
+                                              icon: null, color: null,
+                                            ),
+                                            CommonTextField(
+                                              Controller:
+                                                  TextEditingController(),
+                                              hinText: "Patient Mobile Number*",
+                                              icon: null, color: null,
+                                            ),
+                                            CommonTextField(
+                                              Controller:
+                                                  TextEditingController(),
+                                              hinText: "Type*",
+                                              icon: Icon(Icons.keyboard_arrow_down_rounded), color: null,
+                                            ),
+                                            CommonTextField(
+                                              Controller:
+                                                  TextEditingController(),
+                                              hinText: "Gender",
+                                              icon: Icon(Icons.keyboard_arrow_down_rounded), color: null,
+                                            ),
+                                            CommonTextField(
+                                              Controller:
+                                                  TextEditingController(),
+                                              hinText: "Choose Available Date*",
+                                              icon: Icon(Icons.keyboard_arrow_down_rounded), color: null,
+                                            )
+                                          ],
+                                        ));
+                                  }),
+                              CommonButton(
+                                  buttonColor: Colors.grey[400],
+                                  buttonName: "Labaid Diagnostic Mymensingh ",
+                                  textColor: Colors.black,
+                                  onTap: () {
+                                    Get.to(()=>AlertDiaLogShow(title: null, content: null,));
+                                  })
+                            ],
+                          ));
                     }),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       "specialties:",
-                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
                     ),
                     CommonButton(
                         buttonColor: Colors.blue,

@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 
 class CommonTextField extends StatelessWidget {
-  const CommonTextField({super.key, required this.Controller,required this.hinText});
+  const CommonTextField({super.key, required this.Controller,required this.hinText,required this.icon,required this.color,});
   final TextEditingController Controller;
 
   final dynamic hinText;
+
+  final dynamic icon;
+
+  final dynamic color;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: Controller,
-      decoration: InputDecoration(hintText: hinText,
+      decoration: InputDecoration(hintText: hinText,hintStyle: TextStyle(color:color ),suffixIcon: icon,
           border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
           focusedBorder:
           OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
