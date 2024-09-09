@@ -38,6 +38,7 @@ class SearchFieldDoctor extends StatelessWidget {
                         DropdownButtonFormField(
                             decoration: InputDecoration(
                                 border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(10),
                                     borderSide:
                                         BorderSide(color: Colors.black))),
                             value: value,
@@ -57,7 +58,7 @@ class SearchFieldDoctor extends StatelessWidget {
                         SizedBox(height: 10),
                         DropdownButtonFormField(
                             decoration: InputDecoration(
-                                border: OutlineInputBorder(
+                                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
                                     borderSide:
                                         BorderSide(color: Colors.black))),
                             value: value,
