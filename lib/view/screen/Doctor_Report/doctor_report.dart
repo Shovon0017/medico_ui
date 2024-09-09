@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medico/common%20widget/CommonIcon.dart';
+import 'package:medico/common%20widget/common_button.dart';
+import 'package:medico/common%20widget/common_text_field.dart';
 import 'package:medico/view/screen/notification/notification.dart';
 
 class DoctorReport extends StatelessWidget {
@@ -28,12 +30,26 @@ class DoctorReport extends StatelessWidget {
         ],
       ) ,
       body: Center(
-        child: Column(crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text("Doctor Report",
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-
-          ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal:10),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: 20,
+              ),
+              Text("Doctor Report",
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+              SizedBox(
+                height: 20,
+              ),
+              CommonTextField(Controller: TextEditingController(), hinText: "Type Your Phone Number"),
+              SizedBox(
+                height: 10,
+              ),
+              CommonButton(buttonName: "Track On", onTap: (){
+              })
+            ],
+          ),
         ),
       ),
     );

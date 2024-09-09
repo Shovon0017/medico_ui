@@ -3,11 +3,7 @@ import 'package:flutter/material.dart';
 
 class SearchField extends StatelessWidget {
   const SearchField({super.key,
-    // required this.searchController,
-    // required this.onTap,
     required this.onChanged});
-  // final TextEditingController searchController;
-  // final VoidCallback onTap;
   final void Function(String) onChanged;
 
   @override
