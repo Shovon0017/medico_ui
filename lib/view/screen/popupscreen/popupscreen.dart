@@ -23,7 +23,7 @@ class PopScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 10),
             child: CommonIconButton(onTap: (){
-              Get.to(()=>NotificationShow());
+              Get.offAll(()=>NotificationShow());
             }),
           )
         ],

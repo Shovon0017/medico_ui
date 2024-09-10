@@ -20,4 +20,10 @@ class BottomNavBarController extends GetxController {
     HospitalListSearch(),
     Category()
   ];
+  @override
+  void onInit() {
+    NotchBottomBarController();
+    super.onInit();
+  }
 }
+

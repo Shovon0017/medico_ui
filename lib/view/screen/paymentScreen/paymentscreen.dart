@@ -43,7 +43,7 @@ class PaymentScreen extends StatelessWidget {
             CommonButton(
                 buttonColor: Colors.blue,
                 buttonName: "Payment Ok", onTap: (){
-                  Get.to(()=>NavigationBarShow());
+                  Get.offAll(()=>NavigationBarShow());
             })
           ],
         ),

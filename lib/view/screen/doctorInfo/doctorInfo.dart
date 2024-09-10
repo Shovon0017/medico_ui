@@ -51,10 +51,9 @@ class DoctorInfo extends StatelessWidget {
                   buttonColor: Colors.blue,
                   buttonName: "Booking Now",
                   onTap: () {
-                    Get.defaultDialog(
-                        title: "Book Appointment",titleStyle: TextStyle(fontWeight: FontWeight.bold,color: Colors.blue),
-                        content: Container(
-                          width: double.infinity,
+                    Get.dialog(AlertDialog(
+                        title: Text("Book Appointment",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.blue)),
+                        content: SingleChildScrollView(
                           child: Column(
                             children: [
                               CommonTextField(
@@ -71,25 +70,25 @@ class DoctorInfo extends StatelessWidget {
                                 icon: null, color: null,
                               ),
                               SizedBox(height: 10),
-                              DropdownButtonFormField(
-                                  decoration: InputDecoration(
-                                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
-                                          borderSide:
-                                          BorderSide(color: Colors.black))),
-                                  value: value,
-                                  items: [
-                                    DropdownMenuItem(
-                                      child: Text("Type"),
-                                      value: -1,
-                                    ),
-                                    DropdownMenuItem(
-                                        child: Text("Type-1"), value: 0),
-                                    DropdownMenuItem(
-                                        child: Text("Type-2"), value: 1),
-                                    DropdownMenuItem(
-                                        child: Text("Type-3"), value: 2)
-                                  ],
-                                  onChanged: (v) {}),
+                              // DropdownButtonFormField(
+                              //     decoration: InputDecoration(
+                              //         border: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
+                              //             borderSide:
+                              //             BorderSide(color: Colors.black))),
+                              //     value: value,
+                              //     items: [
+                              //       DropdownMenuItem(
+                              //         child: Text("Type"),
+                              //         value: -1,
+                              //       ),
+                              //       DropdownMenuItem(
+                              //           child: Text("Type-1"), value: 0),
+                              //       DropdownMenuItem(
+                              //           child: Text("Type-2"), value: 1),
+                              //       DropdownMenuItem(
+                              //           child: Text("Type-3"), value: 2)
+                              //     ],
+                              //     onChanged: (v) {}),
                               SizedBox(height: 10),
                               DropdownButtonFormField(
                                   decoration: InputDecoration(
@@ -135,7 +134,8 @@ class DoctorInfo extends StatelessWidget {
                               })
                             ],
                           ),
-                        ));
+                        )
+                    ));
                   }),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
